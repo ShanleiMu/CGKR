@@ -2,10 +2,6 @@
 .idea/
 *.pyc
 *.log
-saved/
-*.lprof
 *.egg-info/
-*.xls
-*.pdf
-*.hyper
-*.yaml
+*.txt
+dataset/*
