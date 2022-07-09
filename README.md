@@ -41,8 +41,10 @@ Coming soon
 
 ## Quick Start
 
-First, download the processed datasets and pre-trained models, then move the dataset to `datset/` and
- move the pre-trained model to `pretrained/`
+First, download the processed datasets and pre-trained models (if needed), then move the dataset to `datset/` and
+move the pre-trained model to `pretrained/`.
+
+If you don't need the pre-trained models, comment this line `pretrained_model_path: 'pretrained/*.pth'` in the file `yaml/*.yaml`.
 
 Train and evaluate on Yelp dataset:
 ```
