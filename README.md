@@ -19,11 +19,11 @@ while the counterfactual generators help the recommender weaken the influence of
 simultaneously.
 
 <div  align="center"> 
-<img src='asset/model1.png' width="80%">
+<img src='assets/model1.png' width="80%">
 </div>
 
 <div  align="center"> 
-<img src='asset/model2.png' width="80%">
+<img src='assets/model2.png' width="80%">
 </div>
 
 
