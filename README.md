@@ -18,21 +18,24 @@ generators better identify potential spurious correlations and generate high-qua
 while the counterfactual generators help the recommender weaken the influence of the potential spurious correlations
 simultaneously.
 
-![](assets/model1.png)
+<div  align="center"> 
+<img src='asset/model1.png' width="80%">
+</div>
 
-![](assets/model2.png)
+<div  align="center"> 
+<img src='asset/model2.png' width="80%">
+</div>
+
 
 ## Requirements
 
-```
-python==3.9.7
-cudatoolkit==11.3.1
-pytorch==1.11.0
-```
+Coming soon
+
 
 ## Download Datasets and Pre-trained Model
 
 Coming soon
+
 
 ## Quick Start
 
@@ -42,6 +45,7 @@ Coming soon
 ## Contact
 
 If you have any questions for our paper or codes, please send an email to shanleimu@outlook.com.
+
 
 ### Acknowledgement
 
