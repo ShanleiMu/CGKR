@@ -6,9 +6,9 @@
 recbole.data.customized_dataset
 ##################################
 
-We only recommend building customized datasets by inheriting.
+We only recommend building customized dataset by inheriting.
 
-Customized datasets named ``[Model Name]Dataset`` can be automatically called.
+Customized dataset named ``[Model Name]Dataset`` can be automatically called.
 """
 
 from recbole.data.dataset import Kg_Seq_Dataset

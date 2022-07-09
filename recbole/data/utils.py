@@ -202,12 +202,12 @@ def dataloader_construct(name, config, eval_setting, dataset,
 
 
 def save_datasets(save_path, name, dataset):
-    """Save split datasets.
+    """Save split dataset.
 
     Args:
         save_path (str): The path of directory for saving.
         name (str or list of str): The stage of dataloader. It can only take two values: 'train' or 'evaluation'.
-        dataset (Dataset or list of Dataset): The split datasets.
+        dataset (Dataset or list of Dataset): The split dataset.
     """
     if (not isinstance(name, list)) and (not isinstance(dataset, list)):
         name = [name]

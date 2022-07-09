@@ -95,7 +95,7 @@ class AbstractSampler(object):
 class Sampler(AbstractSampler):
     """:class:`Sampler` is used to sample negative items for each input user. In order to avoid positive items
     in train-phase to be sampled in vaild-phase, and positive items in train-phase or vaild-phase to be sampled
-    in test-phase, we need to input the datasets of all phases for pre-processing. And, before using this sampler,
+    in test-phase, we need to input the dataset of all phases for pre-processing. And, before using this sampler,
     it is needed to call :meth:`set_phase` to get the sampler of corresponding phase.
 
     Args:
@@ -112,7 +112,7 @@ class Sampler(AbstractSampler):
         if not isinstance(datasets, list):
             datasets = [datasets]
         if len(phases) != len(datasets):
-            raise ValueError('phases {} and datasets {} should have the same length'.format(phases, datasets))
+            raise ValueError('phases {} and dataset {} should have the same length'.format(phases, datasets))
 
         self.phases = phases
         self.datasets = datasets
@@ -265,7 +265,7 @@ class RepeatableSampler(AbstractSampler):
 
     Args:
         phases (str or list of str): All the phases of input.
-        dataset (Dataset): The union of all datasets for each phase.
+        dataset (Dataset): The union of all dataset for each phase.
         distribution (str, optional): Distribution of the negative items. Defaults to 'uniform'.
 
     Attributes:

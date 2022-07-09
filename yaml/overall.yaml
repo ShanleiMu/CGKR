@@ -1,0 +1,65 @@
+# general
+gpu_id: 0
+use_gpu: True
+seed: 2020
+state: INFO
+reproducibility: True
+data_path: 'dataset/'
+checkpoint_dir: 'saved'
+
+# training settings
+epochs: 1000
+train_batch_size: 2048
+learner: adam
+training_neg_sample_num: 1
+eval_step: 1
+stopping_step: 5
+
+# evaluation settings
+eval_setting: RO_RS,full
+group_by_user: True
+split_ratio: [0.8,0.1,0.1]
+leave_one_num: 2
+real_time_process: True
+metrics: ["Recall", "MRR", "NDCG", "Hit", "Precision"]
+topk: [10, 50, 100]
+valid_metric: Recall@10
+eval_batch_size: 200000
+
+# dataset settings
+USER_ID_FIELD: user_id
+ITEM_ID_FIELD: item_id
+RATING_FIELD: rating
+TIME_FIELD: timestamp
+HEAD_ENTITY_ID_FIELD: head_id
+TAIL_ENTITY_ID_FIELD: tail_id
+RELATION_ID_FIELD: relation_id
+ENTITY_ID_FIELD: entity_id
+load_col:
+    inter: [user_id, item_id]
+    kg: [head_id, relation_id, tail_id]
+    link: [item_id, entity_id]
+
+# Rec Model settings
+learning_rate: 0.001
+embedding_size: 64
+n_kg_layers: 1
+n_ui_layers: 2
+max_neighbor_size: 32
+
+# CF Generator settings
+train_recommender: True
+train_generator: True
+cf_pos_flag: True
+cf_neg_flag: True
+gamma: 1.0
+n_cans: 64
+remain_cans: 16
+
+glr: 0.001
+cf_pos_weight: 0.05
+cf_neg_weight: 1.0
+replace_step: 3
+replace_num: 1
+cf_loss_function: bpr
+ib_beta: 1.0

@@ -3,13 +3,14 @@
 # @Author : Shanlei Mu
 # @Email  : slmu@ruc.edu.cn
 
+import argparse
 
 from logging import getLogger
 
-from model import CGKR
-from cf_pos_generator import CFPosGenerator
-from cf_neg_generator import CFNegGenerator
-from trainer import CFTrainer
+from cgkr.model import CGKR
+from cgkr.cf_pos_generator import CFPosGenerator
+from cgkr.cf_neg_generator import CFNegGenerator
+from cgkr.trainer import CFTrainer
 
 from recbole.config import Config
 from recbole.data import create_dataset, data_preparation
@@ -71,24 +72,9 @@ def objective_function(config_dict=None, config_file_list=None, saved=True):
 
 
 if __name__ == '__main__':
-    config_dict = {
-        'n_kg_layers': 1,
-        'n_ui_layers': 2,
-        'reg_weight': 1e-3,
-        'max_neighbor_size': 48,
-
-        'train_recommender': True,
-        'train_generator': True,
-        'cf_pos_flag': True,
-        'cf_neg_flag': True,
-        'glr': 0.01,
-        'gamma': 1,
-        'cf_pos_weight': 0.05,
-        'cf_neg_weight': 1.0,
-        'n_cans': 64,
-        'remain_cans': 16,
-        'replace_step': 1,
-        'replace_num': 5,
-    }
-    objective_function(config_file_list=['yaml/overall.yaml'], config_dict=config_dict,
-                       saved=False)
+    parser = argparse.ArgumentParser()
+    parser.add_argument('--config_files', type=str, default='yaml/overall.yaml')
+    args, _ = parser.parse_known_args()
+    config_file_list = args.config_files.strip().split(',')
+    objective_function(config_file_list=config_file_list, config_dict=None,
+                       saved=True)

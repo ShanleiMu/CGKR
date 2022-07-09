@@ -7,7 +7,7 @@ r"""
 ItemKNN
 ################################################
 Reference:
-    Aiolli,F et al. Efficient top-n recommendation for very large scale binary rated datasets.
+    Aiolli,F et al. Efficient top-n recommendation for very large scale binary rated dataset.
     In Proceedings of the 7th ACM conference on Recommender systems (pp. 273-280). ACM.
 """
 

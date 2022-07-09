@@ -6,7 +6,7 @@
 import torch
 import torch.nn.functional as fn
 
-from generator import CFGenerator
+from cgkr.generator import CFGenerator
 
 
 class CFPosGenerator(CFGenerator):

@@ -222,7 +222,7 @@ class EvalSetting(object):
             Requires setting group by.
 
         Args:
-            leave_one_num (int): number of sub datasets for evaluation.
+            leave_one_num (int): number of sub dataset for evaluation.
                 E.g. ``leave_one_num = 2`` if you have one validation dataset and one test dataset.
         """
         if self.group_field is None:
@@ -308,7 +308,7 @@ class EvalSetting(object):
         """Preset about Random Ordering and Leave-one-out Splitting.
 
         Args:
-            leave_one_num (int): number of sub datasets for evaluation.
+            leave_one_num (int): number of sub dataset for evaluation.
                 E.g. ``leave_one_num=2`` if you have one validation dataset and one test dataset.
             group_by_user (bool): set group field to user_id if True
         """
@@ -321,7 +321,7 @@ class EvalSetting(object):
         """Preset about Temporal Ordering and Leave-one-out Splitting.
 
         Args:
-            leave_one_num (int): number of sub datasets for evaluation.
+            leave_one_num (int): number of sub dataset for evaluation.
                 E.g. ``leave_one_num=2`` if you have one validation dataset and one test dataset.
             group_by_user (bool): set group field to user_id if True
         """

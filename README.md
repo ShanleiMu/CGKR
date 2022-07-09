@@ -29,8 +29,10 @@ simultaneously.
 
 ## Requirements
 
-Coming soon
-
+```
+python==3.8.3
+pytorch==1.7.0
+```
 
 ## Download Datasets and Pre-trained Model
 
