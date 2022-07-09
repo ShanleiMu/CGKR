@@ -41,7 +41,23 @@ Coming soon
 
 ## Quick Start
 
-Coming soon
+First, download the processed datasets and pre-trained models, then move the dataset to `datset/` and
+ move the pre-trained model to `pretrained/`
+
+Train and evaluate on Yelp dataset:
+```
+python run.py --dataset=yelp --config_files yaml/yelp.yaml
+```
+
+Train and evaluate on Music dataset:
+```
+python run.py --dataset=lfm-1b15 --config_files yaml/lfm-1b15.yaml
+```
+
+Train and evaluate on Movie dataset:
+```
+python run.py --dataset=ml-10m --config_files yaml/ml-10m.yaml
+```
 
 
 ## Contact
