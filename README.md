@@ -36,9 +36,12 @@ pytorch==1.7.0
 
 ## Download Datasets and Pre-trained Model
 
-Coming soon
+Datasets: [Baidu Wangpan](https://pan.baidu.com/s/1EGMSaj4qTIk0E_3qOKwFOg) (Password: yn9m),
+ Google Drive (Coming soon).
 
+Pre-trained Model: Coming soon
 
+:wq
 ## Quick Start
 
 First, download the processed datasets and pre-trained models (if needed), then move the dataset to `datset/` and
